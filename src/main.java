@@ -4,7 +4,7 @@ public class main {
 	public static void main(String[]args) {
 		
 		int [] input = {6, 7 ,2,4,3, 1, 1, 6 , 41};
-		selectionSort(input);
+		insertionSort(input);
 		print(input);		
 	}
 	
@@ -16,7 +16,7 @@ public class main {
 	}
 
 	// Bubble Sort Implementation 
-	// O(N^2)
+	// O(n^2)
 	public static void bubbleSort(int [] list) {
 		for(int indexOutter = 0; indexOutter < list.length; indexOutter++) {
 			for(int indexInner = 0; indexInner < list.length - 1 - indexOutter; indexInner++) {
@@ -34,7 +34,7 @@ public class main {
 	
 	
 	// Selection Sort Implementation 
-	// O(N^2)
+	// O(n^2)
 	public static void selectionSort(int [] list) {
 		for (int i = 0; i < list.length; i++) {
 			int smallest = list[i]; 
@@ -52,5 +52,22 @@ public class main {
 			list[i] = smallest;
 		}		
 		
+	}
+	
+	// Insertion Sort Implementation
+	// O(n^2)
+	public static void insertionSort(int [] list) {
+		for (int i = 0; i < list.length; i++) {
+			int insertion = list[i];
+			for (int j = i - 1; j >= 0; j--) {
+				if (insertion < list[j]) {
+					list[j+1] = list[j];
+					list[j] = insertion;
+				} else {
+					break;
+				}
+		
+			} 
+		}
 	}
 }
