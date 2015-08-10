@@ -18,7 +18,10 @@ public class main {
 			System.out.print(input[i] + " ");
 		}
 	}
-
+	
+	// ------- // 
+	// SORTS   // 
+	// ------- // 
 	// Bubble Sort Implementation 
 	// O(n^2)
 	public static void bubbleSort(int [] list) {
@@ -75,9 +78,13 @@ public class main {
 		}
 	}
 	
-	// Binary Search of an Array
+	// -------- // 
+	// SEARCHES // 
+	// -------- // 
+	// Binary Search of an Ordered Array
 	// O(log(n))
-	// Return: The index of one of the searchKey elements in the array if any exist, otherwise -1 
+	// Requires: list must be sorted  
+	// Returns:  The index of one of the searchKey elements in the array if any exist, otherwise -1 
 	public static int binarySearchArrayWrapper(int [] list, int searchKey) {
 		return binarySearchArray(list, searchKey, 0, list.length - 1);
 	}
