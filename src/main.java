@@ -1,11 +1,15 @@
 
 public class main {
 	
+	public static final int ITEM_NOT_FOUND = -1; 
+	
 	public static void main(String[]args) {
 		
-		int [] input = {6, 7 ,2,4,3, 1, 1, 6 , 41};
+		int [] input = {6, 7 ,2,4,3, 1, 1, 6};
 		insertionSort(input);
-		print(input);		
+		print(input);	
+		
+		System.out.println("\n" + binarySearchArrayWrapper(input, 20));
 	}
 	
 	// Print contents of int array
@@ -69,5 +73,31 @@ public class main {
 		
 			} 
 		}
+	}
+	
+	// Binary Search of an Array
+	// O(log(n))
+	// Return: The index of one of the searchKey elements in the array if any exist, otherwise -1 
+	public static int binarySearchArrayWrapper(int [] list, int searchKey) {
+		return binarySearchArray(list, searchKey, 0, list.length - 1);
+	}
+	
+	public static int binarySearchArray(int [] list, int searchKey, int startIndex, int endIndex) {
+		
+		// Item not found 
+		if(endIndex < startIndex) {
+			return ITEM_NOT_FOUND; 
+		}
+		
+		int middleIndex = (startIndex + endIndex) / 2; 
+		int middleValue = list[middleIndex];
+		
+		if(middleValue == searchKey) {
+			return middleIndex; 
+		} else if(middleValue > searchKey) {
+			return binarySearchArray(list, searchKey, startIndex, middleIndex - 1);
+		} else {
+			return binarySearchArray(list, searchKey, middleIndex + 1, endIndex);
+		}	
 	}
 }
