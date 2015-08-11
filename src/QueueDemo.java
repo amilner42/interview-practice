@@ -39,6 +39,12 @@ public class QueueDemo {
 		}
 		
 		System.out.println(queue.toString());
+		
+		queue.enQueue(5);
+		System.out.println(queue.peek());
+		System.out.println(queue.peek());
+		
+		System.out.println(queue.toString());
 	}
 
 }

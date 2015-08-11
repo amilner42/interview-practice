@@ -36,6 +36,16 @@ public class Queue {
 	}
 	
 	// O(1)
+	public int peek() {
+		if(this.isEmpty()) {
+			throw new EmptyStackException(); 
+		} else {
+			int item = array[increment(head)];
+			return item;
+		}
+	}
+	
+	// O(1)
 	public boolean isEmpty() {
 		return currentSize == 0;
 	}
