@@ -1,5 +1,5 @@
 
-public class main {
+public class SortsAndSearches {
 	
 	public static final int ITEM_NOT_FOUND = -1; 
 	
@@ -22,6 +22,7 @@ public class main {
 	// ------- // 
 	// SORTS   // 
 	// ------- // 
+	
 	// Bubble Sort Implementation 
 	// O(n^2)
 	public static void bubbleSort(int [] list) {
@@ -81,6 +82,7 @@ public class main {
 	// -------- // 
 	// SEARCHES // 
 	// -------- // 
+	
 	// Binary Search of an Ordered Array
 	// O(log(n))
 	// Requires: list must be sorted  
