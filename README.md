@@ -10,13 +10,13 @@ Abstract Data Types / Data Structures:
 QUEUE 
 -----
 1. Implement a Queue of ints using a circular array. This Queue must have the following methods: 
-	public Queue(int maxSize)
-	public void enQueue(int data)
-	public int deQueue()
-	public int peek()
-	public boolean isFull()
-	public boolean isEmpty()
-	public String toString()
+	 - public Queue(int maxSize)
+	 - public void enQueue(int data)
+	 - public int deQueue()
+	 - public int peek()
+	 - public boolean isFull()
+	 - public boolean isEmpty()
+	 - public String toString()
 
 Deal with under/overflow using exceptions appropriately
 
@@ -24,19 +24,19 @@ Deal with under/overflow using exceptions appropriately
 LINKED LIST
 -----------
 1. Implement a LinkedList that can store any Type using generics. To make this class, it helps to have a class for Node that also uses generics to store any Type. 
-This LinkedList must have the following methods: 
-	public Node<Type> find(Type data)
-	public int getLength()
-	public void addAtHead(Type data)
-	public void deleteHead()
-	public String toString()
+	This LinkedList must have the following methods: 
+	 - public Node<Type> find(Type data)
+	 - public int getLength()
+	 - public void addAtHead(Type data)
+	 - public void deleteHead()
+	 - public String toString()
 
-The Node must have the following methods: 
-	public void setData(Type data)
-	public void getData()
-	public void setNextNode(Node<Type> nextNode)
-	public void getNextNode()
-	public String toString()
+	The Node must have the following methods: 
+	 - public void setData(Type data)
+	 - public void getData()
+	 - public void setNextNode(Node<Type> nextNode)
+	 - public void getNextNode()
+	 - public String toString()
 
 2. Do the exact same as question 2, but use a DoubleLinkedList. You will also need a new node Class
 
@@ -44,10 +44,10 @@ The Node must have the following methods:
 STACK
 -----
 1. Implement a Stack that can store any type using Generics. It must have the following methods: 
-	public Type pop()
-	public void push(Type data)
-	public Type peek()
-	public String toString()
+	 - public Type pop()
+	 - public void push(Type data)
+	 - public Type peek()
+	 - public String toString()
 
 For the underlying data type, use an ArrayList. What are the speeds of each of these methods in big-O notation 
 if implemented correctly?
