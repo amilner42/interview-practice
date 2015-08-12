@@ -78,4 +78,12 @@ For all searches, analyze the speed using Big-O notation. Program all searches a
 	 - public static int binarySearchArray(int [] list, int searchKey)
 
 If you use recursion, to keep track of the indexes without having more than 2 parameters in the original call you may
-need to use a helper method
+need to overload binarySearchArray
+
+=========
+Recursion
+=========
+--------
+Problems
+--------
+1. Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java optimized for tail recursion?

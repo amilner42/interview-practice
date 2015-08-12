@@ -25,10 +25,10 @@ public class Searches {
 	// Requires: list must be sorted  
 	// Returns:  The index of one of the searchKey elements in the array if any exist, otherwise -1 
 	public static int binarySearchArray(int [] list, int searchKey) {
-		return binarySearchArrayHelper(list, searchKey, 0, list.length - 1);
+		return binarySearchArray(list, searchKey, 0, list.length - 1);
 	}
 	
-	public static int binarySearchArrayHelper(int [] list, int searchKey, int startIndex, int endIndex) {
+	public static int binarySearchArray(int [] list, int searchKey, int startIndex, int endIndex) {
 		
 		// Item not found 
 		if(endIndex < startIndex) {
@@ -41,9 +41,9 @@ public class Searches {
 		if(middleValue == searchKey) {
 			return middleIndex; 
 		} else if(middleValue > searchKey) {
-			return binarySearchArrayHelper(list, searchKey, startIndex, middleIndex - 1);
+			return binarySearchArray(list, searchKey, startIndex, middleIndex - 1);
 		} else {
-			return binarySearchArrayHelper(list, searchKey, middleIndex + 1, endIndex);
+			return binarySearchArray(list, searchKey, middleIndex + 1, endIndex);
 		}	
 	}
 
