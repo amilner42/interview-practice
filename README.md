@@ -78,6 +78,6 @@ For all searches, analyze the speed using Big-O notation. Program all searches a
 Recursion
 =========
 
-Problems
---------
 1. Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java optimized for tail recursion?
+
+2. Solve the famous Towers of Hanoi problem. Is it tail recursive? Why or why not?
