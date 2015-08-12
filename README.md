@@ -57,20 +57,23 @@ Sorts
 For all sorts, analyze the speed using Big-O notation. Program all sorts as static methods inside a sort class with a main method
 
 1. Implement Bubble sort, the method header should look like: 
-	 - public static void bubbleSort(int [] list)
+	 - private static void bubbleSort(int [] list)
 
 2. Implement Selection sort, the method header should look like: 
-	 - public static void selectionSort(int [] list)
+	 - private static void selectionSort(int [] list)
 
 3. Implement Insertion sort, the method header should look like:  
-	 - public static void insertionSort(int [] list)
+	 - private static void insertionSort(int [] list)
+
+4. Implement Merge sort, the method header should look like: 
+	 - private static void mergeSort(int [] list) 
 
 Searches
 --------
 For all searches, analyze the speed using Big-O notation. Program all searches as static methods inside a search class with a main method
 
 1. Implement a binary search that takes in a sorted array, the method header should look like:
-	 - public static int binarySearchArray(int [] list, int searchKey)
+	 - private static int binarySearchArray(int [] list, int searchKey)
 
 	If you use recursion, to keep track of the indexes without having more than 2 parameters in the original call you may
 	need to overload binarySearchArray
