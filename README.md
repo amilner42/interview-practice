@@ -1,7 +1,7 @@
-If you have an interview coming up at a company like Google or Facebook (and many others ...) that you know will ask you technical questions, then you have come to a good place to begin your practice! 
-
-Listed in this README are a bunch of technical computer science questions that will ALL be answered inside seperate class files in the Java Project. Each Solution also may include an associated demo file which will contain a main class 
-and Demo that solution, it is advised to play around with these and learn about all the corner cases! 
+If you have an interview coming up at a company like Google or Facebook (and many others ...) that you know will ask technical questions, then you have come to a good place
+to prepare yourself! Listed in this README are a bunch of technical computer science questions that will ALL be answered inside seperate class files in the Java Project. 
+Each Solution also may include an associated demo file which will contain a main class and Demo that solution, it is advised to play around with these and learn about all
+the corner cases! 
 
 ======================================
 Abstract Data Types / Data Structures: 
@@ -49,8 +49,8 @@ STACK
 	 - public Type peek()
 	 - public String toString()
 
-For the underlying data type, use an ArrayList. What are the speeds of each of these methods in big-O notation 
-if implemented correctly?
+	For the underlying data type, use an ArrayList. What are the speeds of each of these methods in big-O notation 
+	if implemented correctly?
 
 =================
 Sorts / Searches 
@@ -77,8 +77,8 @@ For all searches, analyze the speed using Big-O notation. Program all searches a
 1. Implement a binary search that takes in a sorted array, the method header should look like:
 	 - public static int binarySearchArray(int [] list, int searchKey)
 
-If you use recursion, to keep track of the indexes without having more than 2 parameters in the original call you may
-need to overload binarySearchArray
+	If you use recursion, to keep track of the indexes without having more than 2 parameters in the original call you may
+	need to overload binarySearchArray
 
 =========
 Recursion
