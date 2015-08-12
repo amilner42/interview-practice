@@ -49,6 +49,19 @@ STACK
 	For the underlying data type, use an ArrayList. What are the speeds of each of these methods in big-O notation 
 	if implemented correctly?
 
+BINARY SEARCH TREE
+------------------
+
+1. Implement a BST that stores Integers. To make this BST, it will be useful to have a TreeNode as well.
+	This BST must have the following methods:
+	 - public BinarySearchTree(Integer data);
+	 - public BinarySearchTree()
+	 - public TreeNode find(Integer searchKey)
+	 - public void insert(TreeNode insertNode)
+	 - public boolean delete(Integer searchKey)  [return true if object deleted, false if object not in list]
+
+	The TreeNode class can be implemented in any way you like that allows you to build the BST. 
+
 Sorts / Searches 
 =================
 
