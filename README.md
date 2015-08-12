@@ -3,10 +3,9 @@ to prepare yourself! Listed in this README are a bunch of technical computer sci
 Each Solution also may include an associated demo file which will contain a main class and Demo that solution, it is advised to play around with these and learn about all
 the corner cases! 
 
-======================================
 Abstract Data Types / Data Structures: 
 ======================================
------
+
 QUEUE 
 -----
 1. Implement a Queue of ints using a circular array. This Queue must have the following methods: 
@@ -20,7 +19,6 @@ QUEUE
 
 Deal with under/overflow using exceptions appropriately
 
------------
 LINKED LIST
 -----------
 1. Implement a LinkedList that can store any Type using generics. To make this class, it helps to have a class for Node that also uses generics to store any Type. 
@@ -40,7 +38,6 @@ LINKED LIST
 
 2. Do the exact same as question 2, but use a DoubleLinkedList. You will also need a new node Class
 
------
 STACK
 -----
 1. Implement a Stack that can store any type using Generics. It must have the following methods: 
@@ -52,10 +49,9 @@ STACK
 	For the underlying data type, use an ArrayList. What are the speeds of each of these methods in big-O notation 
 	if implemented correctly?
 
-=================
 Sorts / Searches 
 =================
------
+
 Sorts
 -----
 For all sorts, analyze the speed using Big-O notation. Program all sorts as static methods inside a sort class with a main method
@@ -69,7 +65,6 @@ For all sorts, analyze the speed using Big-O notation. Program all sorts as stat
 3. Implement Insertion sort, the method header should look like:  
 	 - public static void insertionSort(int [] list)
 
---------
 Searches
 --------
 For all searches, analyze the speed using Big-O notation. Program all searches as static methods inside a search class with a main method
@@ -80,10 +75,9 @@ For all searches, analyze the speed using Big-O notation. Program all searches a
 	If you use recursion, to keep track of the indexes without having more than 2 parameters in the original call you may
 	need to overload binarySearchArray
 
-=========
 Recursion
 =========
---------
+
 Problems
 --------
 1. Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java optimized for tail recursion?
