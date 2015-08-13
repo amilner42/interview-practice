@@ -42,6 +42,28 @@ public class BinarySearchTreeDemo {
 		System.out.println("Smallest datum: " + bst.smallest().getData());
 		System.out.println("Largest datum: " + bst.largest().getData());
 		
-		
+		System.out.println("In order traversals to check deletion:");
+		bst.delete(6);
+		System.out.println();
+		bst.inOrderTraversal();
+		bst.delete(1);
+		System.out.println();
+		bst.inOrderTraversal();
+		bst.delete(7);
+		System.out.println();
+		bst.inOrderTraversal();
+		bst.delete(3);
+		System.out.println();
+		bst.inOrderTraversal();
+		bst.delete(8);
+		System.out.println();
+		bst.inOrderTraversal();
+		bst.delete(5);
+		System.out.println();
+		bst.inOrderTraversal();
+		bst.delete(4);
+		System.out.println();
+		bst.inOrderTraversal();
+		System.out.println("\nLength of BST:" + bst.getLength());
 	}
 }

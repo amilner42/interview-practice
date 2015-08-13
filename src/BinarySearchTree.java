@@ -51,8 +51,122 @@ public class BinarySearchTree {
 
 	// Returns: True if the item was deleted from the list, false if the item was not in the list
 	public boolean delete(Integer searchKey) {
-		// TODO 
-		return true;
+		if(root == null) {
+			// Empty BST
+			return false; 
+		} else if(root.getData() == searchKey) {										// the root is the item we are looking to delete
+			if(root.getLeftChild() == null && root.getRightChild() == null) { 			// root has no children 
+				root = null;
+				length--;
+				return true;
+			} else if(root.getLeftChild() == null) {									// root jut has right child
+				root = root.getRightChild();
+				length--;
+				return true;
+			} else if(root.getRightChild() == null) { 									// root just has left child
+				root = root.getLeftChild();
+				length--;
+				return true; 
+			} else { 																	// has two children, replace root with its successor
+				TreeNode successorParent = root.getRightChild();
+				if(successorParent.getLeftChild() == null) { 							// the successor is the roots right child
+					TreeNode successor = successorParent;
+					successor.setLeftChild(root.getLeftChild());
+					root = successor;
+					length--;
+					return true;
+				}
+				
+				// Go down the tree until we have located the successor and its parent
+				while(successorParent.getLeftChild().getLeftChild() != null) {
+					successorParent = successorParent.getLeftChild();
+				}
+				TreeNode successor = successorParent.getLeftChild();
+				
+				successorParent.setLeftChild(successor.getRightChild());				// make sure successors parent points to the correct place
+
+				// Replace the current root with successor 
+				successor.setLeftChild(root.getLeftChild());
+				successor.setRightChild(root.getRightChild());
+				root = successor;
+				length--;
+				return true;
+			}
+		} else {																		// the item we are looking to delete is not the root, it is somewhere else in the tree or it doesn't exist at all
+			TreeNode current = root; 
+
+			// Find the parent of the child to delete, or potentially find out that data does not exist in the tree and return false
+			while((current.getLeftChild() == null || current.getLeftChild().getData() != searchKey) && (current.getRightChild() == null || current.getRightChild().getData() != searchKey)) {
+				if(searchKey > current.getData()) {
+					if(current.getRightChild() == null) {
+						return false; 
+					} else {
+						current = current.getRightChild();
+					}
+				} else {
+					if(current.getLeftChild() == null) {
+						return false; 
+					} else {
+						current = current.getLeftChild();
+					}
+				}
+			}
+
+			// If the program has reached this point in the code, we know that either its left child or its right child must be 
+			// the node that we are looking to delete
+			TreeNode parent = current;
+			TreeNode child; 
+			boolean isRightChild; 
+			
+			// Figure out if child is on the left or right
+			if(searchKey > parent.getData()) {
+				child = parent.getRightChild();
+				isRightChild = true; 
+			} else {
+				child = parent.getLeftChild();
+				isRightChild = false; 
+			}
+			
+			if(child.getLeftChild() == null && child.getRightChild() == null) {			// child has no children
+				return setChild(parent ,null ,isRightChild);
+			} else if(child.getLeftChild() == null) {									// child just has a right child 
+				return setChild(parent, child.getRightChild(), isRightChild);
+			} else if(child.getRightChild() == null) {									// child just has a left child 
+				return setChild(parent, child.getLeftChild(), isRightChild);
+			} else {																	// has two children, replace child with its successor
+				TreeNode successorParent = child.getRightChild();
+				if(successorParent.getLeftChild() == null) {							// the successor is the roots right child
+					return setChild(parent, child.getRightChild(), isRightChild);
+				}
+				
+				// Go down the tree until we have located the successor and its parent
+				while(successorParent.getLeftChild().getLeftChild() != null) {
+					successorParent = successorParent.getLeftChild();
+				}
+				TreeNode successor = successorParent.getLeftChild();
+				
+				
+				successorParent.setLeftChild(successor.getRightChild());				// make sure successors parent points to the correct place
+
+				successor.setLeftChild(child.getLeftChild());
+				successor.setRightChild(child.getRightChild());
+				return setChild(parent, successor, isRightChild);
+			}
+		}
+	}
+	
+	// Sets the parents correct child to be replaced by newChild and hence deleted and subtracts from the length of the BST
+	// Returns: True
+	private boolean setChild(TreeNode parent, TreeNode newChild, boolean isRightChild) {
+		if(isRightChild) {
+			parent.setRightChild(newChild);
+			length--;
+			return true;
+		} else {
+			parent.setLeftChild(newChild);
+			length--; 
+			return true;
+		}
 	}
 
 	// In order traversal 
