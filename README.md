@@ -62,6 +62,8 @@ BINARY SEARCH TREE
 	 - public void inOrderTraversal()
 	 - public void preOrderTraversal()
 	 - public void postOrderTraversal()
+	 - public TreeNode smallest()
+	 - public TreeNode biggest()
 
 	The TreeNode class can be implemented in any way you like that allows you to build the BST. For the traversal methods, simply 
 	print out the node data values as you traverse them.

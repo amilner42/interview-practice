@@ -29,7 +29,7 @@ public class BinarySearchTreeDemo {
 		System.out.println(bst.find(6).getData());
 		System.out.println(bst.find(7).getData());
 		
-		System.out.print("In order Traversal: ");
+		System.out.print("\nIn order Traversal: ");
 		bst.inOrderTraversal();
 		
 		System.out.print("\nPre order Traversal: ");
@@ -38,7 +38,9 @@ public class BinarySearchTreeDemo {
 		System.out.print("\nPost order Traversal: ");
 		bst.postOrderTraversal();
 		
-		System.out.println("\nLength: " + bst.getLength());
+		System.out.println("\n\nLength: " + bst.getLength());
+		System.out.println("Smallest datum: " + bst.smallest().getData());
+		System.out.println("Largest datum: " + bst.largest().getData());
 		
 		
 	}

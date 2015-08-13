@@ -77,6 +77,32 @@ public class BinarySearchTree {
 		}
 	}	
 
+	// Find element with smallest data 
+	public TreeNode smallest() {
+		if(root == null) {
+			return null;
+		} else {
+			TreeNode current = root; 
+			while(current.getLeftChild() != null) {
+				current = current.getLeftChild();
+			}
+			return current;
+		}
+	}
+
+	// Find element with largest data
+	public TreeNode largest() {
+		if(root == null) {
+			return null;
+		} else {
+			TreeNode current = root; 
+			while(current.getRightChild() != null) {
+				current = current.getRightChild();
+			}
+			return current;
+		}
+	}
+
 	public int getLength(){
 		return length; 
 	}
