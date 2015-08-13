@@ -25,6 +25,27 @@ public class TreeNode {
 		}
 	}
 
+	// In order traversal 
+	public void inOrderTraversal() {
+		if(leftChild != null) { leftChild.inOrderTraversal(); }
+		System.out.print("Data: " + data + " ");
+		if(rightChild != null) { rightChild.inOrderTraversal();}
+	}
+
+	// Pre order traversal
+	public void preOrderTraversal() {
+		System.out.print("Data: " + data + " ");
+		if(leftChild != null) { leftChild.preOrderTraversal(); }
+		if(rightChild != null) { rightChild.preOrderTraversal();}
+	}
+
+	// Post order traversal
+	public void postOrderTraversal() {
+		if(leftChild != null) { leftChild.postOrderTraversal(); }
+		if(rightChild != null) { rightChild.postOrderTraversal();}
+		System.out.print("Data: " + data + " ");
+	}
+
 	public TreeNode(Integer data) {
 		this.data = data;
 	}

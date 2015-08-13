@@ -59,8 +59,12 @@ BINARY SEARCH TREE
 	 - public TreeNode find(Integer searchKey)
 	 - public void insert(TreeNode insertNode)
 	 - public boolean delete(Integer searchKey)  [return true if object deleted, false if object not in list]
+	 - public void inOrderTraversal()
+	 - public void preOrderTraversal()
+	 - public void postOrderTraversal()
 
-	The TreeNode class can be implemented in any way you like that allows you to build the BST. 
+	The TreeNode class can be implemented in any way you like that allows you to build the BST. For the traversal methods, simply 
+	print out the node data values as you traverse them.
 
 Sorts / Searches 
 =================

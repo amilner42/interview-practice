@@ -2,8 +2,18 @@
 public class BinarySearchTreeDemo {
 	
 	public static void main(String[]args) {
-		BinarySearchTree bst = new BinarySearchTree(5);
+		BinarySearchTree bst = new BinarySearchTree();
 		
+		/*	The tree:
+		 * 				5
+		 * 		1				8
+		 * 		  3			  6
+		 * 		    4		   7
+		 */
+		
+		System.out.println("\nLength: " + bst.getLength());
+		
+		bst.insert(new TreeNode(5));
 		bst.insert(new TreeNode(8));
 		bst.insert(new TreeNode(1));
 		bst.insert(new TreeNode(3));
@@ -18,6 +28,18 @@ public class BinarySearchTreeDemo {
 		System.out.println(bst.find(5).getData());
 		System.out.println(bst.find(6).getData());
 		System.out.println(bst.find(7).getData());
+		
+		System.out.print("In order Traversal: ");
+		bst.inOrderTraversal();
+		
+		System.out.print("\nPre order Traversal: ");
+		bst.preOrderTraversal();
+		
+		System.out.print("\nPost order Traversal: ");
+		bst.postOrderTraversal();
+		
+		System.out.println("\nLength: " + bst.getLength());
+		
 		
 	}
 }
