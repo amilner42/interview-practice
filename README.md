@@ -76,16 +76,31 @@ Sorts
 For all sorts, analyze the speed using Big-O notation. Program all sorts as static methods inside a sort class with a main method
 
 1. Implement Bubble sort, the method header should look like: 
-	 - private static void bubbleSort(int [] list)
+	 - private static void bubbleSort(int[] list)
 
 2. Implement Selection sort, the method header should look like: 
-	 - private static void selectionSort(int [] list)
+	 - private static void selectionSort(int[] list)
 
 3. Implement Insertion sort, the method header should look like:  
-	 - private static void insertionSort(int [] list)
+	 - private static void insertionSort(int[] list)
 
 4. Implement Merge sort, the method header should look like: 
-	 - private static void mergeSort(int [] list) 
+	 - private static void mergeSort(int[] list) 
+
+5. Implement Quick Sort, the method header should look like:
+	 - private static void quickSort(int[] list)
+
+6. Implement Shell Sort, the method header should look like:
+	 - private static void shellSort(int[] list)
+
+7. Implement Radix Sort, the method header should look like:
+	 - private static void radixSort(int[] list)
+
+8. Implement Counting Sort, the method header should look like:
+	 - private static void countingSort(int[] list)
+
+9. Implement Bucket Sort, the method header should look like:
+	 - private static void bucketSort(int[] list)
 
 Searches
 --------

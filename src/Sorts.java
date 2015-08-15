@@ -122,7 +122,22 @@ public class Sorts {
 			listFinalMoving++;
 		}
 	}
-	
+
+	// TODO
+	private static void quickSort(int[] list) {}
+
+	// TODO
+	private static void shellSort(int[] list) {}
+
+	// TODO
+	private static void radixSort(int[] list) {}
+
+	// TODO
+	private static void countingSort(int[] list) {}
+
+	// TODO
+	private static void bucketSort(int[] list) {}
+
 	// Print contents of int array
 	private static void print(int[] input) {
 		for(int i = 0; i < input.length; i++) {
