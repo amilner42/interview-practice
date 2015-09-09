@@ -8,7 +8,7 @@ public class TreeNode {
 	// Returns: TreeNode with data == searchKey if such a TreeNode exists in the set of tree nodes containing this and all of 
 	// this's direct and indirect children. Otherwise returns null
 	public TreeNode find(Integer searchKey) {
-		if(searchKey == data) {
+		if(searchKey.equals(data)) {
 			return this;
 		} else if(searchKey > data) {
 			if(rightChild == null) {
