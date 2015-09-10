@@ -18,9 +18,19 @@ public class Sorts {
 		int [] input4 = {111, 1 , 43, 2 , 5, 7, 0 , -3 , 6, 7 ,2,4,3, 1, 13 , 1, 6};
 		mergeSort(input4);
 		print(input4);
+
+        int [] input5 = {111, 1 , 43, 2 , 5, 7, 0 , -3 , 6, 7 ,2,4,3, 1, 13 , 1, 6};
+        int [] input6 = {1};
+        int [] input7 = {2 , 1};
+        quickSort(input5);
+        quickSort(input6);
+        quickSort(input7);
+        print(input5);
+        print(input6);
+        print(input7);
 	}
-	
-	// Bubble Sort Implementation 
+
+	// Bubble Sort Implementation
 	// O(n^2)
 	private static void bubbleSort(int [] list) {
 		for(int indexOutter = 0; indexOutter < list.length; indexOutter++) {
@@ -71,7 +81,6 @@ public class Sorts {
 				} else {
 					break;
 				}
-		
 			} 
 		}
 	}
@@ -123,8 +132,53 @@ public class Sorts {
 		}
 	}
 
-	// TODO
-	private static void quickSort(int[] list) {}
+	// O(n^2)
+	// Average: O(nlg(n))
+	// Memory aux: O(1)
+	private static void quickSort(int[] list) {
+		quickSort(list, 0 , list.length - 1);
+	}
+
+	private static void quickSort(int[] list , int startIndex , int endIndex) {
+		if(startIndex < endIndex) {
+            int pivotIndex = partition(list , startIndex , endIndex);
+            quickSort(list , startIndex , pivotIndex - 1);
+            quickSort(list , pivotIndex + 1 , endIndex);
+        }
+	}
+
+	// Returns: index of pivot
+	// Effects: moves things less than pivot to the left of pivot and things greater than pivot to the right of pivot, standard quicksort partition
+    // To pick the pivot element, this function uses the common 3-pivot comparison
+	private static int partition(int[] list, int startIndex, int endIndex) {
+        int[] potentialPivots = {list[startIndex] , list[(startIndex + endIndex) / 2] , list[endIndex]};
+        int[] potentialPivotsCopy = potentialPivots.clone();
+        insertionSort(potentialPivotsCopy);
+        int pivot = potentialPivotsCopy[1];
+
+        // Move pivot to the last element
+        if(pivot == potentialPivots[0]) {
+             list[startIndex] = list[endIndex];
+             list[endIndex] = pivot;
+        } else if(pivot == potentialPivots[1]) {
+            list[(startIndex + endIndex) / 2] = list[endIndex];
+            list[endIndex] = pivot;
+        }
+
+        // move all elements less than pivot to the left of i
+        int lessThanIndex = startIndex;
+        for(int j = startIndex; j < endIndex; j++) {
+            if(list[j] < pivot) {
+                int temp = list[j];
+                list[j] = list[lessThanIndex];
+                list[lessThanIndex] = temp;
+                lessThanIndex++;
+            }
+        }
+        list[endIndex] = list[lessThanIndex];
+        list[lessThanIndex] = pivot;
+        return lessThanIndex;
+    }
 
 	// TODO
 	private static void shellSort(int[] list) {}
