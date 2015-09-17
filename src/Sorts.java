@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Sorts {
 	
@@ -28,6 +29,16 @@ public class Sorts {
         print(input5);
         print(input6);
         print(input7);
+
+        int [] input8 = {111, 1 , 43, 2 , 5, 7, 0 , -3 , 6, 7 ,2,4,3, 1, 13 , 1, 6};
+        int [] input9 = {1};
+        int [] input10 = {2 , 1};
+        quickSort(input8);
+        quickSort(input9);
+        quickSort(input10);
+        print(input8);
+        print(input9);
+        print(input10);
 	}
 
 	// Bubble Sort Implementation
@@ -180,8 +191,32 @@ public class Sorts {
         return lessThanIndex;
     }
 
-	// TODO
-	private static void shellSort(int[] list) {}
+	// Improved version of insertion sort
+	private static void shellSort(int[] list) {
+        // These gaps are supposed to be the best, determined by empirical testing (not mine, Marcin Ciura's gap sequence)
+		int[] gaps = {1 , 4 , 10 , 23 , 57 , 132 , 301 , 701};
+
+        // Go through the gaps, insertion-sorting at each gap-level
+        for(int i = gaps.length - 1; i >= 0; i--) {
+            int currentGap = gaps[i];
+
+            // Preform standard insertion sort BUT only including
+            // the parts of the list separated by currentGap
+            for(int j = currentGap - 1; j < list.length; j += currentGap) {
+				for(int k = j; k > currentGap - 1; k-= currentGap) {
+                    int prevElemIndex = k - currentGap;
+                    int prevElem = list[prevElemIndex];
+                    if(list[k] < prevElem) {
+                        int temp = list[k];
+                        list[k] = prevElem;
+                        list[prevElemIndex] = temp;
+                    }
+				}
+            }
+        }
+	}
+
+
 
 	// TODO
 	private static void radixSort(int[] list) {}
