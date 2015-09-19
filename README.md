@@ -1,4 +1,4 @@
-If you have an interview coming up at a company like Google or Facebook (and many others ...) that you know will ask technical questions, then you have come to a good place
+If you have an interview coming up at a company like Google or Amazon (and many others ...) that you know will ask technical questions, then you have come to a good place
 to prepare yourself! Listed in this README are a bunch of technical computer science questions that will ALL be answered inside seperate class files in the Java Project. 
 Each Solution also may include an associated demo file which will contain a main class and Demo that solution, it is advised to play around with these and learn about all
 the corner cases! 
@@ -92,12 +92,12 @@ For all sorts, analyze the speed using Big-O notation. Program all sorts as stat
 
 6. Implement Shell Sort, the method header should look like:
 	 - private static void shellSort(int[] list)
+	 
+7. Implement Counting Sort, the method header should look like:
+	 - private static void countingSort(int[] list , int startRange , int endRange)
 
-7. Implement Radix Sort, the method header should look like:
+8. Implement Radix Sort, the method header should look like:
 	 - private static void radixSort(int[] list)
-
-8. Implement Counting Sort, the method header should look like:
-	 - private static void countingSort(int[] list)
 
 9. Implement Bucket Sort, the method header should look like:
 	 - private static void bucketSort(int[] list)
