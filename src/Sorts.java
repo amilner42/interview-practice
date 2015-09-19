@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class Sorts {
 	
@@ -55,13 +55,21 @@ public class Sorts {
         int[] input15 = {100};
         int[] input16 = {99 , 100};
         countingSort(input14 , 5 , 22);
-        countingSort(input15 , 100 , 100);
-        countingSort(input16 , 99 , 100);
+        countingSort(input15, 100, 100);
+        countingSort(input16, 99, 100);
         print(input14);
         print(input15);
         print(input16);
 
-
+        int[] input17 = {111 , 132 , 101 , 97 , 456 , 987 , 911 , 777};
+        int[] input18 = {1};
+        int[] input19 = {1 , 2};
+        bucketSort(input17);
+        bucketSort(input18);
+        bucketSort(input19);
+        print(input17);
+        print(input18);
+        print(input19);
 	}
 
 	// Bubble Sort Implementation
@@ -267,8 +275,42 @@ public class Sorts {
 	// TODO
 	private static void radixSort(int[] list) {}
 
-	// TODO
-	private static void bucketSort(int[] list) {}
+    // Requires: Positive numbers
+	// Simple implementation of Bucket Sort using a priorityQueue for the buckets
+	private static void bucketSort(int[] list) {
+        int max = 0;
+
+        // Figure out the max number, and from that the bucket increment, Eg. if max number is 432 then
+        // the bucket increment should 100
+        for(int i = 0; i < list.length; i++) {
+            max = Math.max(max , list[i]);
+        }
+        int bucketIncrement = (int)Math.pow(10 , String.valueOf(max).length() - 1);
+
+        // At each bucket use a priority queue to store the integers
+       PriorityQueue<Integer>[] buckets = new PriorityQueue[10];
+
+        // Go through the list putting each element in its respective bucket
+        for(int i = 0; i < list.length; i++) {
+            int tempIndex = list[i] / bucketIncrement;
+            if(buckets[tempIndex] == null) {
+                buckets[tempIndex] = new PriorityQueue<>();
+            }
+            buckets[tempIndex].add(list[i]);
+        }
+
+        // Go through the buckets moving them back into the original list
+        // Note that they will already be sorted because of the PQ
+        int indexOfList = 0;
+        for(int i = 0; i < buckets.length; i++) {
+            if(buckets[i] != null) {
+                while(!buckets[i].isEmpty()) {
+                    list[indexOfList] = buckets[i].poll();
+                    indexOfList++;
+                }
+            }
+        }
+    }
 
 	// Print contents of int array
 	private static void print(int[] input) {
