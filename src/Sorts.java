@@ -39,6 +39,29 @@ public class Sorts {
         print(input8);
         print(input9);
         print(input10);
+
+        // Testing pre-offset implementation (assuming list starts at 0)
+        int [] input11 = {0 , 4 , 2 , 7 , 1 , 1 , 1 , 3 , 6 , 4 , 2  , 8 , 1  , 1  , 4 , 8 , 0 , 0};
+        int [] input12 = {0};
+        int [] input13 = {1 , 0 };
+        countingSort(input11 , 0, 8);
+        countingSort(input12 , 0 , 0);
+        countingSort(input13, 0 , 1);
+        print(input11);
+        print(input12);
+        print(input13);
+
+        int[] input14 = {16 , 11 , 12 , 5 , 22 , 21 , 21 , 22 , 6 , 16};
+        int[] input15 = {100};
+        int[] input16 = {99 , 100};
+        countingSort(input14 , 5 , 22);
+        countingSort(input15 , 100 , 100);
+        countingSort(input16 , 99 , 100);
+        print(input14);
+        print(input15);
+        print(input16);
+
+
 	}
 
 	// Bubble Sort Implementation
@@ -216,13 +239,33 @@ public class Sorts {
         }
 	}
 
+	// Requires: startRange < endRange
+	// Good sort if the data range is known and small compared to n
+	private static void countingSort(int[] list , int startRange , int endRange) {
+		// Deal with offsets
+        int offset = 0;
+        if(startRange != 0) {
+            offset = startRange;
+        }
 
+        int lengthOfRange = endRange - startRange + 1;
+		int[] counter = new int[lengthOfRange];
+        for(int i = 0; i < list.length; i++) {
+            counter[list[i] - offset]++;                         // Subtracting offset here to make the numbers 0 based
+        }
+
+        int indexOfList = 0;
+        for(int indexOfCounter = 0; indexOfCounter < counter.length; indexOfCounter++) {
+            while(counter[indexOfCounter] > 0) {
+                list[indexOfList] = indexOfCounter + offset;    // Adding offset to make up for subtracted offset
+                indexOfList++;
+                counter[indexOfCounter]--;
+            }
+        }
+	}
 
 	// TODO
 	private static void radixSort(int[] list) {}
-
-	// TODO
-	private static void countingSort(int[] list) {}
 
 	// TODO
 	private static void bucketSort(int[] list) {}
