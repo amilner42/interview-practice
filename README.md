@@ -58,7 +58,7 @@ HEAP
 	- public boolean delete(int integer) 
 	- public int peek()
 	- public int pop()
-	- public boolean contains()
+	- public boolean contains(int integer)
 	- public boolean isEmpty()
 	- public int size()
 	
