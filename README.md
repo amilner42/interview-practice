@@ -48,6 +48,22 @@ STACK
 
 	For the underlying data type, use an ArrayList. What are the speeds of each of these methods in big-O notation 
 	if implemented correctly?
+	
+HEAP
+----
+1. Implement a Heap that stores integers. It must have the following methods: 
+	- public Heap(int initialSize)
+	- public Heap(int[] initialValues)
+	- public void add(int integer) 
+	- public boolean delete(int integer) 
+	- public int peek()
+	- public int pop()
+	- public boolean contains()
+	- public boolean isEmpty()
+	- public int size()
+	
+	Implement the heap in any way you think is best, but make sure it is fast! What are the speeds of each of these 
+	methods in big-O notation if implemented correctly?
 
 BINARY SEARCH TREE
 ------------------
