@@ -70,7 +70,18 @@ public class Sorts {
         print(input17);
         print(input18);
         print(input19);
-	}
+
+        int[] input20 = {111 , 132 , 101 , 97 , 456 , 987 , 911 , 777};
+        int[] input21 = {1};
+        int[] input22 = {1 , 2};
+        heapSort(input20);
+        heapSort(input21);
+        heapSort(input22);
+        print(input20);
+        print(input21);
+        print(input22);
+
+    }
 
 	// Bubble Sort Implementation
 	// O(n^2)
@@ -309,6 +320,15 @@ public class Sorts {
                     indexOfList++;
                 }
             }
+        }
+    }
+
+    // Uses Heap defined in this package
+    // O(nlogn)
+    private static void heapSort(int[] list) {
+        Heap heap = new Heap(list);
+        for(int i = list.length - 1; i >= 0; i--) {
+            list[i] = heap.pop();
         }
     }
 

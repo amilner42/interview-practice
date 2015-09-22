@@ -6,7 +6,7 @@ the corner cases!
 Abstract Data Types / Data Structures: 
 ======================================
 
-QUEUE 
+QUEUE
 -----
 1. Implement a Queue of ints using a circular array. This Queue must have the following methods: 
 	 - public Queue(int maxSize)
@@ -117,6 +117,11 @@ For all sorts, analyze the speed using Big-O notation. Program all sorts as stat
 
 9. Implement Bucket Sort, the method header should look like:
 	 - private static void bucketSort(int[] list)
+
+10. Implement Heap Sort, the method header should look like:
+     - private static void heapSort(int[] list)
+     
+     Note: This is a great place to test your own heap! 
 
 Searches
 --------
