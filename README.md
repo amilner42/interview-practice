@@ -2,7 +2,7 @@ If you have an interview coming up at a company like Google or Amazon (and many 
 technical questions, then you have come to a good place to prepare yourself! Listed in this README are a bunch of 
 technical computer science questions that will ALL be answered inside seperate class files in the Java Project. Each 
 solution also may include an associated demo file which will contain a main class and demo that solution, it is advised 
-to play around with these and learn about all   ,l.the corner cases! 
+to play around with these and learn about all the corner cases! 
 
 If you find any mistakes in my code, and there will be mistakes, try and fix them as an exercise! Once you think you have
 a working implementation, shoot me a pull request, I always appreciate help :)
