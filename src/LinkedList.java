@@ -76,6 +76,20 @@ public class LinkedList<Type> {
 			length -= 1; 			
 		}
 	}
+
+    // Modifies: this
+    // Effects: Reverse the linked list
+    public void reverse() {
+        Node<Type> rememberMe = head.getNextNode();
+        head.setNextNode(null);                     // this line is key, the front of the new list should point to null
+
+        while(rememberMe != null) {
+            Node<Type> temp = head;
+            head = rememberMe;
+            rememberMe = head.getNextNode();
+            head.setNextNode(temp);
+        }
+    }
 	
 	// Print out the node using node.toString
 	// Eg. { node1.toString() , node2.toString() , node3.toString() }

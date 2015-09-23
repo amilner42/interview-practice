@@ -26,7 +26,10 @@ public class LinkedListDemo {
 		
 		Node<Double> find45 = list.find(35.1);
 		System.out.println(find45.getData());
-		
-		
-	}
+
+        list.reverse();
+        System.out.println(list.toString());
+
+
+    }
 }
