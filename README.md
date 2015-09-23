@@ -52,6 +52,12 @@ LINKED LIST
 
 2. Do the exact same as question 2, but use a DoubleLinkedList. You will also need a new node Class
 
+3. Reverse a SinglyLinkedList. Eg.
+    - {} ==> {}
+    - {1} ==> {1}
+    - {1 -> 3 -> 18 -> 8} ==> {8 -> 18 -> 3 -> 1} 
+    The method header should like: 
+    - public <Type> void reverseLinkedList(LinkedList<Type> )
 STACK
 -----
 1. Implement a Stack that can store any type using Generics. It must have the following methods: 
