@@ -13,7 +13,7 @@ public class Queue {
 	}
 	
 	// O(1)
-	public void enQueue(int data) {
+	public void enqueue(int data) {
 		if(this.isFull()) {
 			throw new StackOverflowError();
 		} else {
@@ -24,7 +24,7 @@ public class Queue {
 	}
 	
 	// O(1)
-	public int deQueue() {
+	public int dequeue() {
 		if(this.isEmpty()) {
 			throw new EmptyStackException(); 
 		} else {

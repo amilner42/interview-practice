@@ -10,11 +10,11 @@ public class PriorityQueue {
         heap = new Heap(list);
     }
 
-    public void enQueue(int data) {
+    public void enqueue(int data) {
         heap.add(data);
     }
 
-    public int deQueue() {
+    public int dequeue() {
         return heap.pop();
     }
 

@@ -17,8 +17,8 @@ QUEUE
 -----
 1. Implement a Queue of ints using a circular array. This Queue must have the following methods: 
 	 - public Queue(int maxSize)
-	 - public void enQueue(int data)
-	 - public int deQueue()
+	 - public void enqueue(int data)
+	 - public int dequeue()
 	 - public int peek()
 	 - public boolean isFull()
 	 - public boolean isEmpty()
@@ -77,8 +77,8 @@ PRIORITY QUEUE
 1. Implement a Priority Queue that stores integers. It must have the following methods:
 	 - public PriorityQueue(int initialSize)
 	 - public PriorityQueue(int [] list)
-	 - public void enQueue(int data)
-	 - public int deQueue()
+	 - public void enqueue(int data)
+	 - public int dequeue()
 	 - public int peek()
 	 - public boolean isEmpty()
 

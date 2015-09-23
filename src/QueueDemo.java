@@ -6,41 +6,41 @@ public class QueueDemo {
 		System.out.println(queue.isEmpty());
 		System.out.println(queue.toString());
 		
-		queue.enQueue(5);
-		queue.enQueue(7);
-		queue.enQueue(10);
+		queue.enqueue(5);
+		queue.enqueue(7);
+		queue.enqueue(10);
 		
 		System.out.println(queue.toString());
 		System.out.println(queue.toString());
 		
-		queue.enQueue(12);
+		queue.enqueue(12);
 		
 		System.out.println(queue.toString());
 		System.out.println(queue.isFull());
 		
 		try {
-			queue.enQueue(15);
+			queue.enqueue(15);
 		} catch (Error e) {
 			System.out.println(e);
 		}
 		
-		queue.deQueue();
-		queue.deQueue();
+		queue.dequeue();
+		queue.dequeue();
 		
 		System.out.println(queue.toString());
 		
-		queue.deQueue();
-		queue.deQueue();
+		queue.dequeue();
+		queue.dequeue();
 		
 		try {
-			queue.deQueue();	
+			queue.dequeue();
 		} catch(Exception e) {
 			System.out.println(e);
 		}
 		
 		System.out.println(queue.toString());
 		
-		queue.enQueue(5);
+		queue.enqueue(5);
 		System.out.println(queue.peek());
 		System.out.println(queue.peek());
 		
