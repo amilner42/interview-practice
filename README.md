@@ -23,8 +23,15 @@ QUEUE
 	 - public boolean isFull()
 	 - public boolean isEmpty()
 	 - public String toString()
+     
+     Deal with under/overflow using exceptions appropriately
 
-Deal with under/overflow using exceptions appropriately
+2. Implement a Queue using two stacks, make use of generics. This StackQueue must have the following methods: 
+	 - public StackQueue()
+	 - public StackQueue(int[] list)
+	 - public void enqueue(Type obj)
+	 - public Type dequeue()
+	 - public boolean isEmpty()
 
 LINKED LIST
 -----------
