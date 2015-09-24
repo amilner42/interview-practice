@@ -1,6 +1,6 @@
 package sortsAndSearches;
 
-public class Searches {
+public class BinarySearch {
 	
 	public static final int ITEM_NOT_FOUND = -1; 
 
@@ -47,5 +47,4 @@ public class Searches {
 			return binarySearchArray(list, searchKey, middleIndex + 1, endIndex);
 		}	
 	}
-
 }
