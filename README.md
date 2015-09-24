@@ -39,7 +39,8 @@ LINKED LIST
 	This LinkedList must have the following methods: 
 	 - public Node<Type> find(Type data)
 	 - public int getLength()
-	 - public void addAtHead(Type data)
+	 - public void addDataAtHead(Type data)
+	 - public void addNodeAtHead(Node<Type> nextNode)
 	 - public void deleteHead()
 	 - public String toString()
 
@@ -54,6 +55,9 @@ LINKED LIST
 
 3. Reverse a SinglyLinkedList, the method header should look like:
 	- public void reverse() [Put this method inside your LinkedList class]
+
+4. Check if a SinglyLinkedList is cyclic, the method header should look like:
+	- public boolean cyclic() [Put this method inside your LinkedList class]
 
 STACK
 -----

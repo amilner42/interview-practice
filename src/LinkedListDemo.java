@@ -4,7 +4,7 @@ public class LinkedListDemo {
 	public static void main(String[]args) {
 		LinkedList<Double> list = new LinkedList<Double>();
 		
-		list.addAtHead(3.2);
+		list.addDataAtHead(3.2);
 
 		
 		System.out.println(list.toString());
@@ -16,10 +16,10 @@ public class LinkedListDemo {
 		System.out.println(list.toString());
 		System.out.println(list.getLength());
 		
-		list.addAtHead(45.1);
-		list.addAtHead(35.1);
-		list.addAtHead(25.1);
-		list.addAtHead(15.1);
+		list.addDataAtHead(45.1);
+		list.addDataAtHead(35.1);
+		list.addDataAtHead(25.1);
+		list.addDataAtHead(15.1);
 		
 		System.out.println(list.toString());
 		System.out.println(list.getLength());
@@ -30,6 +30,9 @@ public class LinkedListDemo {
         list.reverse();
         System.out.println(list.toString());
 
+		System.out.println(list.cyclic());
+        list.addNodeAtHead(list.find(15.1)); // make it cyclic
 
+        System.out.println(list.cyclic());
     }
 }

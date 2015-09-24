@@ -61,12 +61,18 @@ public class LinkedList<Type> {
 	
 	// Create a node with data and add it to the front of the list
 	// O(1)
-	public void addAtHead(Type data) {
+	public void addDataAtHead(Type data) {
 		Node<Type> newHead = new Node<Type>(data);
 		newHead.setNextNode(this.head);
 		this.head = newHead;
 		length += 1;
 	}
+
+    // Add a node to the front of this list
+    public void addNodeAtHead(Node<Type> nextNode) {
+        nextNode.setNextNode(head);
+        head = nextNode;
+    }
 	
 	// Delete the head node (garbage collection)
 	// O(1)
@@ -90,7 +96,29 @@ public class LinkedList<Type> {
             head.setNextNode(temp);
         }
     }
-	
+
+	// Explanation: What is cool about this solution is that it takes O(1) memory! Read this solution
+	// and make sure it makes sense to you
+	public boolean cyclic() {
+		if(head == null) {
+			return false;
+		}
+		Node<Type> slowPointer = head;
+		Node<Type> fastPointer = head;
+
+		while(true) {
+			for(int i = 0; i < 2; i++) {
+				fastPointer = fastPointer.getNextNode();
+				if(fastPointer == null) {
+					return false;
+				} else if(fastPointer == slowPointer) {
+					return true;
+				}
+			}
+			slowPointer = slowPointer.getNextNode();
+		}
+	}
+
 	// Print out the node using node.toString
 	// Eg. { node1.toString() , node2.toString() , node3.toString() }
 	// O(N)
