@@ -1,3 +1,7 @@
+package sortsAndSearches;
+
+import dataStructures.Heap;
+
 import java.util.PriorityQueue;
 
 public class Sorts {
@@ -323,7 +327,7 @@ public class Sorts {
         }
     }
 
-    // Uses Heap defined in this package
+    // Uses dataStructures.Heap defined in this package
     // O(nlogn)
     private static void heapSort(int[] list) {
         Heap heap = new Heap(list);

@@ -1,3 +1,5 @@
+package dataStructures;
+
 class DoubleNode<Type> {
 
 	private Type data;
@@ -52,7 +54,7 @@ public class DoubleLinkedList<Type> {
 		}
 	}
 	
-	// Add Node with data to front of the list
+	// Add dataStructures.Node with data to front of the list
 	// O(1)
 	public void addAtHead(Type data) {
 		DoubleNode<Type> newHead = new DoubleNode<Type>(data);

@@ -1,3 +1,5 @@
+package dataStructures;
+
 class Node<Type> {
 
 	private Type data;
@@ -38,7 +40,7 @@ public class LinkedList<Type> {
 		length = 0;
 	}
 	
-	// Returns: Pointer to the first Node in the list where Node.getData().equals(data)
+	// Returns: Pointer to the first dataStructures.Node in the list where dataStructures.Node.getData().equals(data)
 	// O(N)
 	public Node<Type> find(Type data) {
 		Node<Type> currentNode = head; 

@@ -1,3 +1,5 @@
+package dataStructures;
+
 public class PriorityQueue {
 
     private Heap heap;

@@ -1,11 +1,13 @@
-// TreeNode that stores Integers
+package dataStructures;
+
+// dataStructures.TreeNode that stores Integers
 class TreeNode {
 
 	private Integer data;
 	private TreeNode leftChild;
 	private TreeNode rightChild;
 
-	// Returns: TreeNode with data == searchKey if such a TreeNode exists in the set of tree nodes containing this and all of
+	// Returns: dataStructures.TreeNode with data == searchKey if such a dataStructures.TreeNode exists in the set of tree nodes containing this and all of
 	// this's direct and indirect children. Otherwise returns null
 	public TreeNode find(Integer searchKey) {
 		if(searchKey.equals(data)) {
@@ -91,7 +93,7 @@ public class BinarySearchTree {
 		length++;
 	}
 
-	// Returns: TreeNode with data == searchKey if that TreeNode exists in this BST, otherwise returns null
+	// Returns: dataStructures.TreeNode with data == searchKey if that dataStructures.TreeNode exists in this BST, otherwise returns null
 	public TreeNode find(Integer searchKey) {
 		return root.find(searchKey);
 	}

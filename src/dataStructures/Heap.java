@@ -1,3 +1,5 @@
+package dataStructures;
+
 import java.util.ArrayList;
 
 public class Heap {
@@ -74,7 +76,7 @@ public class Heap {
     }
 
     public String toString() {
-        String result = "Heap: ";
+        String result = "dataStructures.Heap: ";
         for(int i = 0; i < heap.size(); i++) {
             result += heap.get(i) + " ";
         }

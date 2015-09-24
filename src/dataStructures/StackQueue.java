@@ -1,3 +1,5 @@
+package dataStructures;
+
 import java.util.*;
 
 public class StackQueue<Type> {

@@ -1,3 +1,5 @@
+package dataStructures;
+
 public class HeapDemo {
 
     // Have fun here and play around with the heap!

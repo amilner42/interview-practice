@@ -1,6 +1,8 @@
+package dataStructures;
+
 import java.util.EmptyStackException;
 
-// An implementation of a Queue using a circular array
+// An implementation of a dataStructures.Queue using a circular array
 public class Queue {
 	
 	private int[] array;
