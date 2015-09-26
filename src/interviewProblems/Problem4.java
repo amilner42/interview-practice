@@ -26,6 +26,8 @@ public class Problem4 {
         }
     }
 
+    // O(n) space
+    // O(n) time
     private static int[] productAllButMe(int[] data) throws ArrayTooSmallException {
 
         int[] result = new int[data.length];
