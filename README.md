@@ -155,3 +155,8 @@ have a main method that tests out the sort
 optimized for tail recursion?
 
 2. Solve the famous Towers of Hanoi problem. Is it tail recursive? Why or why not?
+
+3. Assuming I give you an array of numbers, lets say they represent stock prices, find me the most money you could make
+that day by buying and selling a single stock. If the stocks go down all day, you should find me the least amount of money
+I could lose that day. The method header should look like:
+    - private static int bestStockTrade(int[] stockPrices) [throws ... ]
