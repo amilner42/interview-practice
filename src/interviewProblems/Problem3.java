@@ -33,7 +33,7 @@ public class Problem3 {
     private static int bestStockTrade(int[] stockPrices) throws NotEnoughStockPricesException {
 
         if (stockPrices.length < 2) {
-            throw new NotEnoughStockPricesException("You need more stock prices");
+            throw new NotEnoughStockPricesException("You need more stock prices, you only entered " + stockPrices.length);
         }
 
         int bestSale = Integer.MIN_VALUE;            // start at the lowest possible value

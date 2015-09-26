@@ -160,3 +160,8 @@ optimized for tail recursion?
 that day by buying and selling a single stock. If the stocks go down all day, you should find me the least amount of money
 I could lose that day. The method header should look like:
     - private static int bestStockTrade(int[] stockPrices) [throws ... ]
+    
+4. Given an array of integers, eg [1 , 2 , 3, 4], return an array where at each index you get the result of multiplying 
+by all the other values. Eg. [1 , 2 , 3 , 4] --> [2*3*4 , 1*3*4, 1*2*4 , 1*2*3]. Do NOT use division. The method header 
+should look like: 
+    - private static int[] productAllButMe(int[] data) [throws ...]
