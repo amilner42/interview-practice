@@ -1,5 +1,7 @@
 package interviewProblems;
 
+import interviewProblems.exceptions.ArrayTooSmallException;
+
 public class Problem3 {
 
     public static void main(String[] args) {
@@ -14,7 +16,7 @@ public class Problem3 {
 
         try {
             System.out.println(bestStockTrade(data1));
-        } catch (NotEnoughStockPricesException e) {
+        } catch (ArrayTooSmallException e) {
             System.out.println(e.getMessage());
         }
 
@@ -30,10 +32,10 @@ public class Problem3 {
 
     // O(n) speed
     // O(1) memory
-    private static int bestStockTrade(int[] stockPrices) throws NotEnoughStockPricesException {
+    private static int bestStockTrade(int[] stockPrices) throws ArrayTooSmallException {
 
         if (stockPrices.length < 2) {
-            throw new NotEnoughStockPricesException("You need more stock prices, you only entered " + stockPrices.length);
+            throw new ArrayTooSmallException(2 , stockPrices.length);
         }
 
         int bestSale = Integer.MIN_VALUE;            // start at the lowest possible value
@@ -52,10 +54,3 @@ public class Problem3 {
     }
 }
 
-// I make this exception a checked exception because you can deal with it easily
-class NotEnoughStockPricesException extends Exception {
-
-    public NotEnoughStockPricesException(String info) {
-        super(info);
-    }
-}

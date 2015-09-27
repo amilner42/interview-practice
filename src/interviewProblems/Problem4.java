@@ -1,5 +1,6 @@
 package interviewProblems;
 
+import interviewProblems.exceptions.ArrayTooSmallException;
 import java.util.Arrays;
 
 public class Problem4 {
@@ -33,7 +34,7 @@ public class Problem4 {
         int[] result = new int[data.length];
 
         if(data.length < 2) {
-            throw new ArrayTooSmallException("Array must at minimum have two elements to preform productAllButMe(int[] data)");
+            throw new ArrayTooSmallException(2 , data.length);
         }
 
         int recordMultiplication = 1;
@@ -52,9 +53,3 @@ public class Problem4 {
     }
 }
 
-class ArrayTooSmallException extends Exception {
-
-    public ArrayTooSmallException(String info) {
-        super(info);
-    }
-}
