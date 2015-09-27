@@ -45,7 +45,7 @@ must have the following methods:
 ```
 
 2. Implement a Queue using two stacks, make use of generics. This StackQueue must have the following methods:
- ```java
+```java
     public StackQueue()
     public StackQueue(int[] list)
     public void enqueue(Type obj)
@@ -56,7 +56,7 @@ must have the following methods:
 ### LINKED LIST
 1. Implement a LinkedList that can store any type using generics. To make this class, it helps to have a class for Node
 that also uses generics to store any type. This LinkedList must have the following methods:
- ```java
+```java
     public Node<Type> find(Type data)
     public int getLength()
     public void addDataAtHead(Type data)
@@ -88,7 +88,7 @@ speeds of each of these methods in big-O notation if implemented correctly? It m
 ### HEAP
 1. Implement a Heap that stores integers. Implement the heap in any way you think is best, but make sure it is fast! What
 are the speeds of each of these methods in big-O notation if implemented correctly? It must have the following methods:
- ```java
+'```java
     public Heap(int initialSize)
     public Heap(int[] initialValues)
     public void add(int integer) 
