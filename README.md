@@ -162,6 +162,10 @@ I could lose that day. The method header should look like:
     - private static int bestStockTrade(int[] stockPrices) [throws ... ]
     
 4. Given an array of integers, eg [1 , 2 , 3, 4], return an array where at each index you get the result of multiplying 
-by all the other values. Eg. [1 , 2 , 3 , 4] --> [2*3*4 , 1*3*4, 1*2*4 , 1*2*3]. Do NOT use division. The method header 
+by all the other values. Eg. [1 , 2 , 3 , 4] --> [2x3x4 , 1x3x4, 1x2x4 , 1x2x3]. Do NOT use division. The method header 
 should look like: 
     - private static int[] productAllButMe(int[] data) [throws ...]
+    
+5. Given an array of integers, what is the maximum product you could get from multiplying any 3 of the integers. The 
+method header should look like:
+    - private static int productOfThree(int[] data) [throws ...]
