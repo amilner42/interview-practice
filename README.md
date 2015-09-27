@@ -169,3 +169,25 @@ should look like:
 5. Given an array of integers, what is the maximum product you could get from multiplying any 3 of the integers. The 
 method header should look like:
     - private static int productOfThree(int[] data) [throws ...]
+
+6. Given an array of pairs of positive integers, write a function that goes through and see which parts of the timeline
+are covered. Eg. Given the array of [{1-4} , {2-7} , {9-11} , {1-3} , {12 - 14}] --> [{1-7} , {9 - 14}]. You could 
+imagine this being useful if we had a list of everyones schedule and we wanted to see when everyone was free. For the actual
+representation of the input, use the following class:
+
+```java
+    class Schedule {
+        public int startTime; 
+        public int endTime; 
+        
+        public Schedule(int startTime , int endTime) {
+            this.startTime = startTime; 
+            this.endTime = endTime; 
+        }
+    }
+```
+
+For the method header:
+```java
+    private static List<Schedule> scheduler(List<Schedule> schedules) throws ...
+```
