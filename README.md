@@ -191,33 +191,32 @@ have a main method that tests out the sort
 ```
 
 ## Interview Problems
-* Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java
+1. Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java
 optimized for tail recursion?
 
-* Solve the famous Towers of Hanoi problem. Is it tail recursive? Why or why not?
+2. Solve the famous Towers of Hanoi problem. Is it tail recursive? Why or why not?
 
-* Assuming I give you an array of numbers, lets say they represent stock prices, find me the most money you could make
+3. Assuming I give you an array of numbers, lets say they represent stock prices, find me the most money you could make
 that day by buying and selling a single stock. If the stocks go down all day, you should find me the least amount of money
 I could lose that day. The method header should look like:
 ```java
     private static int bestStockTrade(int[] stockPrices) throws ...
 ```
     
-* Given an array of integers, eg [1 , 2 , 3, 4], return an array where at each index you get the result of multiplying 
+4. Given an array of integers, eg [1 , 2 , 3, 4], return an array where at each index you get the result of multiplying 
 by all the other values. Eg. [1 , 2 , 3 , 4] --> [2x3x4 , 1x3x4, 1x2x4 , 1x2x3]. Do NOT use division. The method header 
 should look like: 
 ```java
     private static int[] productAllButMe(int[] data) throws ...
 ```
-
-    
-* Given an array of integers, what is the maximum product you could get from multiplying any 3 of the integers. The 
+  
+5. Given an array of integers, what is the maximum product you could get from multiplying any 3 of the integers. The 
 method header should look like:
 ```java
     private static int productOfThree(int[] data) throws ...
 ```
 
-* Given an array of pairs of integers, write a function that goes through and see which parts of the timeline
+6. Given an array of pairs of integers, write a function that goes through and see which parts of the timeline
 are covered. Eg. Given the array of [(1,4) , (2,7) , (9,11) , (1,3) , (12,14)] --> [(1,7) , (9,14)]. You could 
 imagine this being useful if we had a list of everyones schedule and we wanted to see when everyone was free. For the actual
 representation of the input, use the following class:
