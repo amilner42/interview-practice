@@ -13,20 +13,28 @@ public class DoubleLinkedListDemo {
 		
 		System.out.println(list.toString());
 		System.out.println(list.length());
-		
-		list.deleteHead();
-		list.deleteHead();
+
+		try {
+			list.deleteHead();
+			list.deleteHead();
+		} catch(Exception e) {
+			System.out.println("You should not be seeing this");
+		}
 		
 		System.out.println(list.toString());
 		System.out.println(list.length());
-		
-		list.deleteHead();
-		list.deleteHead();
-		list.deleteHead();
-		list.deleteHead();
-		list.deleteHead();
-		list.deleteHead();
-		
+
+		try {
+			list.deleteHead();
+			list.deleteHead();
+			list.deleteHead();
+			list.deleteHead();
+			list.deleteHead();
+			list.deleteHead();
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+
 		System.out.println(list.toString());
 		System.out.println(list.length());		
 	}

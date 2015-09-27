@@ -1,6 +1,6 @@
 package interviewProblems;
 
-import interviewProblems.exceptions.ArrayTooSmallException;
+import exceptions.ArrayTooSmallException;
 import java.util.PriorityQueue;
 
 public class Problem5 {

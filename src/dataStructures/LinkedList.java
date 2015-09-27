@@ -1,5 +1,8 @@
 package dataStructures;
 
+import exceptions.EmptyLinkedListException;
+import sun.invoke.empty.Empty;
+
 class Node<Type> {
 
 	private Type data;
@@ -78,10 +81,14 @@ public class LinkedList<Type> {
 	
 	// Delete the head node (garbage collection)
 	// O(1)
-	public void deleteHead(){
+	public Node<Type> deleteHead() throws EmptyLinkedListException{
 		if(this.head != null) {
+			Node<Type> temp = this.head;
 			this.head = this.head.getNextNode();
-			length -= 1; 			
+			length -= 1;
+			return temp;
+		} else {
+			throw new EmptyLinkedListException("Empty list, cannot delete");
 		}
 	}
 

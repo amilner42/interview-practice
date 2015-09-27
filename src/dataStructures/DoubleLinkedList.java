@@ -1,5 +1,7 @@
 package dataStructures;
 
+import exceptions.EmptyLinkedListException;
+
 class DoubleNode<Type> {
 
 	private Type data;
@@ -44,13 +46,17 @@ public class DoubleLinkedList<Type> {
 	
 	// Delete the head node
 	// O(1)
-	public void deleteHead() {
+	public DoubleNode<Type> deleteHead() throws EmptyLinkedListException {
 		if(this.head != null) {
+			DoubleNode<Type> temp = this.head;
 			head = head.getNextNode();
 			length--;
-			if(head != null) {
+			if (head != null) {
 				head.setPrevNode(null);
 			}
+			return temp;
+		} else {
+			throw new EmptyLinkedListException("Can't delete() on empty list");
 		}
 	}
 	

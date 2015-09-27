@@ -1,4 +1,4 @@
-package interviewProblems.exceptions;
+package exceptions;
 
 public class ArrayTooSmallException extends Exception {
 

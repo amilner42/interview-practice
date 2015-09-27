@@ -10,10 +10,14 @@ public class LinkedListDemo {
 		
 		System.out.println(list.toString());
 		System.out.println(list.getLength());
-		
-		list.deleteHead();
-		list.deleteHead();
-		
+
+		try {
+			list.deleteHead();
+			list.deleteHead();
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+
 		System.out.println(list.toString());
 		System.out.println(list.getLength());
 		
