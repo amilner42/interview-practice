@@ -248,3 +248,30 @@ have a main method that tests out the sort
     ```java
         private static List<Schedule> scheduler(List<Schedule> schedules)
     ```
+7.
+    Given an array of People, where a person is represented by a startTime and finishTime for their work shift, return
+    the shortest list possible of people where those people see all other people during their shifts. For example, if 
+    given these people (1 , 2) , (2 , 10) , (5 , 6) then you should return (2 , 10) because this person sees everyone 
+    else during his shift. If given (1 , 5) , (4 , 10) , (2 , 3) , (11 , 13)  --> (1 , 5) , (11 , 13). For the actual
+    representation of person, use the following class: 
+    ```java
+        class Person {
+            public int startTime;
+            public int finishTime;
+        
+            public Person(int startTime , int finishTime) {
+                this.startTime = startTime;
+                this.finishTime = finishTime;
+            }
+        
+            @Override
+            public String toString() {
+                return "(" + startTime + " , " + finishTime + ")";
+            }
+        }
+    ```
+    
+    For the method header:
+    ```java
+        private static List<Person> selectPeople(List<Person> people) throws ...
+    ```
