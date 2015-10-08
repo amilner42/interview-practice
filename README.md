@@ -275,3 +275,15 @@ have a main method that tests out the sort
     ```java
         private static List<Person> selectPeople(List<Person> people) throws ...
     ```
+    
+8. 
+    Given an array of integers, where there is guaranteed to be one number that is not duplicated, find that number. Note
+    that in this list of coupled numbers, only 1 number has no duplicate, and every other number has one and only one 
+    duplicate. Possible input: [1 , 2 , 2 , 3 , 3 , 4 , 4] , [2] , [3 , 7 , 3] etc...
+    
+    For the method header:
+    ```java
+        private static int uncoupledInteger(int[] list) 
+    ```
+    
+    Extra Points: Can you do it in constant memory and linear time? 
