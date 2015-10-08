@@ -191,14 +191,14 @@ have a main method that tests out the sort
 ```
 
 ## Interview Problems
-P1. 
+[P1]
     Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java
     optimized for tail recursion?
 
-P2. 
+[P2]
     Solve the famous Towers of Hanoi problem. Is it tail recursive? Why or why not?
 
-P3. 
+[P3] 
     Assuming I give you an array of numbers, lets say they represent stock prices, find me the most money you could make
     that day by buying and selling a single stock. If the stocks go down all day, you should find me the least amount of money
     I could lose that day. The method header should look like:
@@ -206,7 +206,7 @@ P3.
         private static int bestStockTrade(int[] stockPrices) throws ...
     ``` 
 
-P4. 
+[P4] 
     Given an array of integers, eg [1 , 2 , 3, 4], return an array where at each index you get the result of multiplying 
     by all the other values. Eg. [1 , 2 , 3 , 4] --> [2x3x4 , 1x3x4, 1x2x4 , 1x2x3]. Do NOT use division. The method header 
     should look like: 
@@ -214,14 +214,14 @@ P4.
         private static int[] productAllButMe(int[] data) throws ...
     ```
   
-P5. 
+[P5] 
     Given an array of integers, what is the maximum product you could get from multiplying any 3 of the integers. The 
     method header should look like:
     ```java
         private static int productOfThree(int[] data) throws ...
     ```
 
-P6. 
+[P6] 
     Given an array of pairs of integers, write a function that goes through and see which parts of the timeline
     are covered. Eg. Given the array of [(1,4) , (2,7) , (9,11) , (1,3) , (12,14)] --> [(1,7) , (9,14)]. You could 
     imagine this being useful if we had a list of everyones schedule and we wanted to see when everyone was free. For the actual
@@ -249,7 +249,7 @@ P6.
         private static List<Schedule> scheduler(List<Schedule> schedules)
     ```
     
-P7.
+[P7]
     Given an array of People, where a person is represented by a startTime and finishTime for their work shift, return
     the shortest list possible of people where those people see all other people during their shifts. For example, if 
     given these people (1 , 2) , (2 , 10) , (5 , 6) then you should return (2 , 10) because this person sees everyone 
@@ -278,7 +278,7 @@ P7.
         private static List<Person> selectPeople(List<Person> people) throws ...
     ```
     
-P8. 
+[P8] 
     Given an array of integers, where there is guaranteed to be one number that is not duplicated, find that number. Note
     that in this list of coupled numbers, only 1 number has no duplicate, and every other number has one and only one 
     duplicate. Possible input: [1 , 2 , 2 , 3 , 3 , 4 , 4] , [2] , [3 , 7 , 3] etc...
