@@ -296,3 +296,16 @@ For the method header:
 ```java
 	private static boolean balancedDelimiters(String delimiters) 
 ```
+
+*[P10]*
+Given an array of integers and a target sum, make a function that returns true if the target sum is a sum of 
+two of the integers in the array. For example, given the array [1 , 2 , 3 , 4, -100 , 0 , 0] and target 5 it should 
+return true because 4 + 1 = 5. Note that if the same array was given, but the target was 8, the answer would return false.
+You cannot add an integer to itself to produce the target, you must find two separate integers. Note that these two
+separate integers could have the same value, eg. if the same array was given but 0 was given as the target, it should return
+true because there are two integers in the array that sum to 0 - the 0 in the 5th index and the 0 in the 6th index. 
+
+For the method header: 
+```java
+	private static boolean targetSummable(int[] array , int target) 
+```
