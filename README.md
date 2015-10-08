@@ -1,13 +1,13 @@
-# Technical Interview Preperation Guide
+# Technical Interview Preparation Guide
  
-### Introduction
+### [Introduction]
 If you have an interview coming up at a company like Google or Amazon (and many others ...) that you know will ask
 technical questions, then you have come to a good place to prepare yourself! Listed in this README are a bunch of 
 technical computer science questions that will ALL be answered inside separate packages/class-files. Each solution also 
 may include an associated demo file which will contain a main class and demo that solution, it is advised to play around
 with these and learn about all the corner cases! 
 
-### Organization
+### [Organization]
 1. Data Structures
 	* Implement this data structure
 	* Implement this method for a data structure
@@ -17,21 +17,32 @@ with these and learn about all the corner cases!
 3. Interview Problems
 	* Solve this problem
 
-### How to Follow this Guide
+### [Training]
 It is not organized like this for no reason! It is recommended to have a good understanding of different data structures
 and sorts and searches before moving on to general interview problems. These will be your tools to help understand and 
 solve different interview problems. Doing all the sorts is optional, but it is recommended that you have a good
-understanding of at minimum two O(nlogn) sorts.
+understanding of at minimum one O(nlogn) sort.
 
-### Contributing 
+### [Navigation]
+This README was designed to be simple and fast to browse using only control-f. If you quickly want to jump to somewhere 
+in the readme, simply search (using control-f) for it in square brackets. Make sure your search is not case sensitive!
+
+Quick Search Options: 
+* data-structures: [name-of-data-structure] 
+* sorts: [name-of-sort]
+* interview problems: [P#]
+* section: [name-of-section-header]
+
+
+### [Contributing] 
 If you find any mistakes in my code, and there will be mistakes, try and fix them as an exercise! Once you think you have
 a working implementation, shoot me a pull request, I always appreciate friendly help :) If you have any ideas for things
 you wanna add, feel free to code it up and shoot me a pull request, just please keep your code clean - clean code or no
 code at all. Again I always appreciate help and thanks in advance :) 
 
-## Data Structures: 
+## [Data Structures] 
 
-### QUEUE
+### [QUEUE]
 * Implement a Queue of ints using a circular array. Deal with under/overflow using exceptions appropriately. This Queue
 must have the following methods:
 ```java
@@ -53,7 +64,7 @@ must have the following methods:
     public boolean isEmpty()
 ```
 
-### LINKED LIST
+### [LINKED LIST]
 * Implement a LinkedList that can store any type using generics. To make this class, it helps to have a class for Node
 that also uses generics to store any type. This LinkedList must have the following methods:
 ```java
@@ -76,7 +87,7 @@ that also uses generics to store any type. This LinkedList must have the followi
 ```java
     public boolean cyclic() // put this method inside your LinkedList class
 ```
-### STACK
+### [STACK]
 * Implement a Stack that can store any type using generics. For the underlying data type, use an ArrayList. What are the
 speeds of each of these methods in big-O notation if implemented correctly? It must have the following methods:
 ```java
@@ -87,7 +98,7 @@ speeds of each of these methods in big-O notation if implemented correctly? It m
     public String toString()
 ```
 
-### HEAP
+### [HEAP]
 * Implement a Heap that stores integers. Implement the heap in any way you think is best, but make sure it is fast! What
 are the speeds of each of these methods in big-O notation if implemented correctly? It must have the following methods:
 ```java
@@ -102,7 +113,7 @@ are the speeds of each of these methods in big-O notation if implemented correct
     public int size()
 ```
 	
-### PRIORITY QUEUE
+### [PRIORITY QUEUE]
 * Implement a Priority Queue that stores integers. It must have the following methods:
 ```java
     public PriorityQueue(int initialSize)
@@ -113,7 +124,7 @@ are the speeds of each of these methods in big-O notation if implemented correct
     public boolean isEmpty()
 ```
 
-### BINARY SEARCH TREE
+### [BINARY SEARCH TREE]
 * Implement a BST that stores Integers. To make this BST, it will be useful to have a TreeNode as well. For the traversal
 methods, simply print out the node data values as you traverse them. This BST must have the following methods:
 ```java
@@ -129,68 +140,68 @@ methods, simply print out the node data values as you traverse them. This BST mu
     public TreeNode biggest()
 ```
 
-## Sorts / Searches 
-### Sorts
+## [Sorts / Searches] 
+### [Sorts]
 For all sorts, analyze the speed using Big-O notation. Program all sorts as static methods in individual classes that each
 have a main method that tests out the sort
 
-* Implement Bubble sort, the method header should look like: 
+* Implement [Bubble sort], the method header should look like: 
 ```java
     private static void bubbleSort(int[] list)
 ```
 
-* Implement Selection sort, the method header should look like: 
+* Implement [Selection sort], the method header should look like: 
 ```java
     private static void selectionSort(int[] list)
 ```
 
-* Implement Insertion sort, the method header should look like:  
+* Implement [Insertion sort], the method header should look like:  
 ```java
     private static void insertionSort(int[] list)
 ```
 
-* Implement Merge sort, the method header should look like: 
+* Implement [Merge sort], the method header should look like: 
 ```java
     private static void mergeSort(int[] list) 
 ```
 
-* Implement Quick Sort, the method header should look like:
+* Implement [Quick Sort], the method header should look like:
 ```java
     private static void quickSort(int[] list)
 ```
 
-* Implement Shell Sort, the method header should look like:
+* Implement [Shell Sort], the method header should look like:
 ```java
     private static void shellSort(int[] list)
 ```
 
-* Implement Counting Sort, the method header should look like:
+* Implement [Counting Sort], the method header should look like:
 ```java
     private static void countingSort(int[] list , int startRange , int endRange)
 ```
 
-* Implement Radix Sort, the method header should look like:
+* Implement [Radix Sort], the method header should look like:
 ```java
     private static void radixSort(int[] list)
 ```
 
-* Implement Bucket Sort, the method header should look like:
+* Implement [Bucket Sort], the method header should look like:
 ```java
     private static void bucketSort(int[] list)
 ```
 
-* Implement Heap Sort (this is a great place to test your own heap), the method header should look like:
+* Implement [Heap Sort] (this is a great place to test your own heap), the method header should look like:
 ```java
     private static void heapSort(int[] list)
 ```
 
-### Searches
-* Implement a binary search that takes in a sorted array, the method header should look like:
+### [Searches]
+* Implement a [binary search] that takes in a sorted array, the method header should look like:
 ```java
     private static int binarySearchArray(int [] list, int searchKey)
 ```
 
-## Interview Problems
+## [Interview Problems]
 *[P1]*
 Implement factorial recursively. Implement it again, but this time use tail recursion. What is tail recursion? Is Java
 optimized for tail recursion?
