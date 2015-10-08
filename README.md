@@ -289,17 +289,8 @@ Extra Points: Can you do it in constant memory and linear time?
 *[P9]*
 Given a string that is full of delimiters, check whether the string had balanced delimiters. The only delimiters we will
 worry about in this problem are the following: [ ] { } ( ). There are no other characters in this string except for the
-delimiters. The following strings are balanced and should return true:
-    - ""
-    - "()"
-    - "{}[]()"
-    - "([{}])"
-    
-The following strings are not balanced and should return false:
-    - "["
-    - "{}}"
-    - "{{]}"
-    - "{[}]"
+delimiters. The following strings are balanced and should return true: "" , "()" , "{}()[]" , "([{}])". The following
+strings are not balanced and should return false: "[" , "{}}" , "{{]}" , "{[}]"
 
 For the method header: 
 ```java
